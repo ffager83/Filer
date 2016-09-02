@@ -143,7 +143,7 @@ public class File : CustomStringConvertible, Equatable {
     }
 
     public convenience init(url: NSURL) {
-        let (dir, dirName, fileName) = File.parsePath(url.absoluteString)!
+        let (dir, dirName, fileName) = File.parsePath(url.absoluteString!)!
         self.init(directory: dir, dirName: dirName, fileName: fileName)
     }
 
